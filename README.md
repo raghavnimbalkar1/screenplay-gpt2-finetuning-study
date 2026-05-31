@@ -28,7 +28,7 @@ A comparative MLOps engineering study on fine-tuning GPT-2 Small for screenplay 
 | Environment | Hardware | Method | Steps | Epoch | Final Eval Loss | Wall Time |
 |---|---|---|---|---|---|---|
 | **Cloud CUDA** | NVIDIA T4 · 16GB | Full-parameter | 9,272 | 1.00 | **1.3194** | 7h 43m 30s |
-| **Apple Silicon** | MacBook Air M · 8GB | LoRA (PEFT) | 4,700 | 0.51 | 2.4017 | 7h 51m 02s |
+| **Apple Silicon** | MacBook Air M2 · 8GB | LoRA (PEFT) | 4,700 | 0.51 | 2.4017 | 7h 51m 02s |
 | **Windows AMD** | RX 6700 XT · 12GB | Full-parameter | Debug phase | — | — | Ongoing |
 
 Both the cloud and local runs spent roughly the same wall-clock time training. The divergence in loss is a direct consequence of architecture and data coverage — not compute investment.
@@ -152,7 +152,7 @@ python resume_training.py --checkpoint_path ./checkpoints/checkpoint-5600
 
 ---
 
-## Environment 2 — Apple Silicon MPS (LoRA)
+## Environment 2 — Apple Silicon MPS (Base M2 Macbook Air)(LoRA)
 
 **The edge compute test.** Making LLM fine-tuning viable on a fanless consumer laptop with 8GB unified memory.
 
