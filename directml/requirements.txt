@@ -1,0 +1,31 @@
+# ============================================================
+# Screenplay Fine-Tuning GPT-2 Dependencies
+# Windows + AMD GPU (DirectML) + PyTorch
+# ============================================================
+
+# Core PyTorch with DirectML support (AMD GPU acceleration)
+# DirectML: Microsoft's GPU acceleration for AMD/Intel/NVIDIA
+# Note: torch-directml is a wrapper around standard PyTorch for Windows
+torch-directml>=0.2.0
+torch>=2.0.0
+
+# HuggingFace Transformers: Pre-trained models (GPT-2, etc.)
+transformers>=4.30.0
+
+# HuggingFace Datasets: Efficient data loading/processing
+datasets>=2.13.0
+
+# Accelerate: Training utilities (mixed precision, gradient accumulation)
+accelerate>=0.20.0
+
+# Numerical computing
+numpy>=1.23.0
+
+# Progress bars for training loops
+tqdm>=4.65.0
+
+# YAML configuration parsing
+PyYAML>=6.0
+
+# Additional utilities
+python-dotenv>=1.0.0
