@@ -271,7 +271,7 @@ python train_final.py
 
 ## Cross-Platform Comparison
 
-| Metric | Cloud CUDA (T4) | Apple Silicon (MPS) | AMD DirectML |
+| Metric | Cloud CUDA (T4) | Apple Silicon (M2 Air Base) | AMD DirectML |
 |--------|-----------------|---------------------|--------------|
 | **VRAM / Memory** | 16GB GDDR6 | 8GB Unified | 12GB GDDR6 |
 | **Backend** | Native CUDA | MPS (Metal) | DirectML |
