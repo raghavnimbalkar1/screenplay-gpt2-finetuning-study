@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://huggingface.co/raghavnimbalkar1/screenplay-gpt2-full"><img src="https://img.shields.io/badge/HF%20Model-Full%20Parameter-ff6b35?style=flat-square&logo=huggingface" /></a>
-  <a href="https://huggingface.co/raghavnimbalkar1/screenplay-gpt2-lora"><img src="https://img.shields.io/badge/HF%20Model-LoRA%20Adapter-ff6b35?style=flat-square&logo=huggingface" /></a>
-  <a href="https://huggingface.co/datasets/raghavnimbalkar1/screenplay-corpus"><img src="https://img.shields.io/badge/HF%20Dataset-Tokenized%20Corpus-ff6b35?style=flat-square&logo=huggingface" /></a>
-  <a href="https://www.kaggle.com/datasets/YOUR_KAGGLE_SLUG"><img src="https://img.shields.io/badge/Kaggle-Raw%20Scripts-20beff?style=flat-square&logo=kaggle" /></a>
+  <a href="https://huggingface.co/raghavnimbalkar/gpt2-screenplay-generator"><img src="https://img.shields.io/badge/HF%20Model-Full%20Parameter-ff6b35?style=flat-square&logo=huggingface" /></a>
+  <a href="https://huggingface.co/raghavnimbalkar/gpt2-screenplay-mac-lora"><img src="https://img.shields.io/badge/HF%20Model-LoRA%20Adapter-ff6b35?style=flat-square&logo=huggingface" /></a>
+  <a href="https://huggingface.co/datasets/raghavnimbalkar/movie-screenplays-tokenized-dataset"><img src="https://img.shields.io/badge/HF%20Dataset-Tokenized%20Corpus-ff6b35?style=flat-square&logo=huggingface" /></a>
+  <a href="https://www.kaggle.com/datasets/raghavnimbalkar10/movie-screenplays-tokenized-dataset"><img src="https://img.shields.io/badge/Kaggle-Raw%20Scripts-20beff?style=flat-square&logo=kaggle" /></a>
 </p>
 
 ---
