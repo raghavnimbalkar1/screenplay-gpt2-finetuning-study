@@ -1,0 +1,46 @@
+# ============================================================
+# Screenplay Fine-Tuning Configuration
+# ============================================================
+
+# ========== Model Configuration ==========
+model_name: "gpt2"                    # HuggingFace model ID (gpt2, gpt2-medium, etc.) - using base gpt2 (small)
+tokenizer_name: "gpt2"                # Tokenizer to use (usually same as model)
+
+# ========== Data Configuration ==========
+data_dir: "data/processed/genres_final"  # Path to organized genre scripts
+output_dir: "outputs"                 # Where to save training outputs
+model_save_dir: "checkpoints"         # Where to save model checkpoints
+
+# ========== Training Hyperparameters ==========
+# These are conservative/stable settings for full fine-tuning
+learning_rate: 5e-5                   # Standard for fine-tuning (not training from scratch)
+batch_size: 2                         # Batch size per GPU (reduced to fit in 12GB VRAM)
+num_epochs: 3                         # Number of training epochs
+max_seq_length: 512                   # Tokenizer max length (GPT-2 max: 1024)
+gradient_accumulation_steps: 2        # For effective larger batch sizes
+warmup_steps: 500                     # Linear warmup schedule
+weight_decay: 0.01                    # L2 regularization
+
+# ========== Hardware Configuration ==========
+device: "directml"                    # Use DirectML for AMD GPU
+use_gpu: true                         # Enable GPU acceleration
+mixed_precision: "fp16"               # Mixed precision training (faster, less VRAM)
+
+# ========== Dataset Configuration ==========
+train_split_ratio: 0.8                # 80% train
+eval_split_ratio: 0.1                 # 10% validation
+test_split_ratio: 0.1                 # 10% test
+stratify_by_genre: true               # Ensure each split has genre balance
+
+# ========== Generation Configuration ==========
+max_length: 200                       # Max tokens to generate
+temperature: 0.8                      # Randomness (0.7-1.0 = more creative)
+top_p: 0.95                           # Nucleus sampling
+num_return_sequences: 1               # How many samples to generate
+
+# ========== Logging & Saving ==========
+logging_steps: 100                    # Log metrics every N steps
+eval_steps: 500                       # Evaluate every N steps
+save_steps: 500                       # Save checkpoint every N steps
+save_total_limit: 3                   # Keep only last 3 checkpoints
+seed: 42                              # For reproducibility
